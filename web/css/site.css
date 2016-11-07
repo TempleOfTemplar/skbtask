@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&subset=cyrillic');
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    margin-bottom: 130px;
+}
+
+/*
+    Header styles
+*/
+
+header .free-call {
+    font-size: 11px;
+}
+
+/*
+    Изменил размер номера телефона, т.к. иначе надпись "бесплатный звонок по россии" оказывается длиннее.
+    Причина - в Photoshop макете написано "бесплатный звонок по роСии" (одна С). Айяйяй =)
+*/
+header .phone {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+header {
+    margin: 20px 0;
+}
+
+.green {
+    color: #00675d;
+}
+
+.body-content {
+    /*background-image: url("../images/smiling_human_and_snake.png");
+    background-size: contain;
+    background-repeat: no-repeat;*/
+}
+
+.hero-banner {
+    position: relative;
+}
+
+.hero-banner > div {
+    position: absolute;
+    right: 0;
+    top: 50px;
+}
+
+.hero-banner > div > p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.styled-list > li {
+    list-style: none;
+    line-height: 41px;
+    margin-bottom: 9px;
+    padding-left: 18px;
+    font-size: 18px;
+}
+
+.yellow-gradient {
+    background: #fff987;
+    background: -moz-linear-gradient(top, #fff987 0%, #ffc25f 100%);
+    background: -webkit-linear-gradient(top, #fff987 0%, #ffc25f 100%);
+    background: linear-gradient(to bottom, #fff987 0%, #ffc25f 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff987', endColorstr='#ffc25f', GradientType=0);
+}
+
+.circle-label {
+    text-align: center;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+}
+
+.numberCircle {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    width: 70px;
+    padding: 8px;
+    font-weight: lighter;
+    font-size: 50px;
+    line-height: 1em;
+    position: relative;
+}
+
+.numberCircle .height_fix {
+    margin-top: 100%;
+}
+
+.numberCircle .content {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    margin-top: -0.5em; /* Note, this must be half the font size */
+}
+
+/*
+    Да, можно сделать просто через list-style-image или смещенный background, но вдруг понадобиться поменять градиент?)
+*/
+.styled-list {
+    /* list-style-image: url("../images/yellow_marker.png");*/
+}
+
+.styled-list > li:before {
+    content: url("../images/list-mark.png");
+    line-height: 1em;
+    padding: 5px 0 10px 10px;
+    position: absolute;
+    border-radius: 50%;
+    left: 10px;
+    background: #fff987;
+    background: -moz-linear-gradient(top, #fff987 0%, #ffc25f 100%);
+    background: -webkit-linear-gradient(top, #fff987 0%, #ffc25f 100%);
+    background: linear-gradient(to bottom, #fff987 0%, #ffc25f 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff987', endColorstr='#ffc25f', GradientType=0);
+}
+
+/*
+    В макете представлен эффект "градиентного свечения" вокруг подложки формы + тени одновременно.
+    Теоретически такой эффект может быть реализован примерно таким вот гразьненьким и громоздким хаком:
+    https://habrahabr.ru/post/140760/
+    Подобное решение кажется мне монструозным для такой задачи, и не известно как оно поведет себя в различных браузерах.
+    В реальной ситуации я бы наверное просто попросил дизайнеров ограничиться одним эффектом - т.е. градиентом, но с
+    градиент-стопами, которые симулируют тень.
+*/
+.register-form-wrap {
+    padding: 30px 0;
+    background-color: #FFF;
+    margin-top: -30px;
+    -webkit-box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.register-form-wrap .clear-margins {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+    Ribbon
+*/
+.corner-ribbon {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    pointer-events: none;
+}
+
+.wrapper {
+
+}
+
+.btn-submit {
+    padding: 14px 70px;
+    border-radius: 30px;
+    font-size: 16px;
+    color: #000;
+}
+
+.double-arrows {
+    padding: 0 20px;
+}
+
+/*
+    footer-thanks
+*/
+.footer-striped {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAASElEQVQoU2N8+fbRfwYC4OOHjwyMhBSCFPEL8ONXCFMEshCniciKcCpEV4RVITZFGApxKUJRiE8RXCEhRWCFt+5e/g8KJ0IAAL9ZQAOG8zJmAAAAAElFTkSuQmCC);
+
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 130px;
+    box-shadow: inset 1px 4px 9px -6px;
+    display:table;
+}
+footer > p,
+footer > div {
+    display:table-cell;
+    vertical-align:middle;
+}
+footer p {
+    margin-bottom: 0;
+}
+.footer-phone {
+    font-size: 18px;
+}
+
+
+/*
+    utility classes
+*/
+
+.nomargin {
+    margin-bottom: 0;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.vertical-align {
+    display: inline-block;
+}
+
+.vertical-align > * {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.promo-block {
+    margin-top: 50px;
+}
+
+.promo-block h4 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.promo-block p {
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.promo-list {
+    margin: 30px 0 50px 0;
+}
+
+.thanks h3 {
+    margin-bottom: 30px;
+    /* font-size: 20px; */
+}
+
+.thanks .promo-block {
+    margin-top: 16px;
+}
+
+.thanks .promo-block > div {
+    margin: 5px 0;
+}
+
+.thanks .btn-wrap {
+    margin: 20px 0 30px 0;
+}
+
+.thanks {
+    -webkit-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.3);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
